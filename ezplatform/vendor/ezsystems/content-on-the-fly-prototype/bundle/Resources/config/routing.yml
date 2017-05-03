@@ -1,5 +1,0 @@
-contentonthefly.location_controller.suggested:
-    path: /contentonthefly/locations/{contentTypeIdentifier}
-    defaults:
-        _controller: contentonthefly.controller.location:suggestedAction
-    methods: [GET]

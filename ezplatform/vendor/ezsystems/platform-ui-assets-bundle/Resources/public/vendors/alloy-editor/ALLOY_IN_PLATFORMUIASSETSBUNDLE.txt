@@ -1,2 +1,0 @@
-This is a customized Alloy version.
-To decrease the size of the bundle, it does not include API docs and lib

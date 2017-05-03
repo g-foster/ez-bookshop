@@ -1,9 +1,0 @@
-<h2 class="ez-raw-content-title"><a href="#" class="ez-collapse-toggle">{{ translate 'rawcontent.content' 'locationview' }}</a></h2>
-<div class="ez-language-switcher-container"></div>
-<div class="ez-fieldgroups">
-{{#each fieldGroups}}
-    <h3 class="ez-fieldgroup-name"><a href="#" class="ez-collapse-toggle">{{ translate fieldGroupName 'ezplatform_fields_groups' }}</a></h3>
-    <section class="ez-fieldgroup ez-fieldgroup-{{ fieldGroupName }}">
-    </section>
-{{/each}}
-</div>

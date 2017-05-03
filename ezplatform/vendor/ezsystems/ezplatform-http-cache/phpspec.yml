@@ -1,7 +1,0 @@
-extensions:
-    Memio\SpecGen\MemioSpecGenExtension: ~
-
-suites:
-    http_cache:
-        namespace: EzSystems\PlatformHttpCacheBundle
-        psr4_prefix: EzSystems\PlatformHttpCacheBundle

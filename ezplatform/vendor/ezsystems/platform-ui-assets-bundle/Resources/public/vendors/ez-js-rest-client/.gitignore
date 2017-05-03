@@ -1,5 +1,0 @@
-api/
-node_modules/
-test/coverage/
-test/instrument/
-test/manual/jsRestClientBundle/Resources/public/js/CAPI.js
