@@ -1,0 +1,9 @@
+{% include 'AppBundle:Bundle:header.html.twig' %}
+
+{% block content %}
+    {{ render(controller('AppBundle:Search:getArticlesByCategory', {
+		category: category,
+	}))}}
+{% endblock %}
+
+{% include 'AppBundle:Bundle:footer.html.twig' %}
