@@ -6,14 +6,13 @@ use eZ\Bundle\EzPublishCoreBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
 
 class SearchController extends Controller
 {
     /**
      * @Route("/", name="app_search_index")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
         $response = new Response();
         $response->headers->set('Content-Type', 'text/html');
