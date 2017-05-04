@@ -1,9 +1,7 @@
-{% include 'AppBundle:Bundle:header.html.twig' %}
+{% extends 'AppBundle:Search:index.html' %}
 
 {% block content %}
-    {{ render(controller('AppBundle:Search:getArticlesByCategory', {
+    {{ render(controller('AppBundle:Search:getProductsByCategory', {
 		category: category,
 	}))}}
 {% endblock %}
-
-{% include 'AppBundle:Bundle:footer.html.twig' %}
