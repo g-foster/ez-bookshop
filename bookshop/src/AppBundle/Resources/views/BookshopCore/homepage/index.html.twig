@@ -1,0 +1,14 @@
+{% include 'AppBundle:BookshopCore/homepage:header.html.twig' %}
+
+{% block content %}
+
+<h1>Product catalogue (FULL)</h1>
+<p>Here is our complete product catalogue:</p>
+
+{{ render_esi(
+    controller('AppBundle:Default:getArticles', {parentLocationId: 54,})
+) }}
+
+{% endblock %}
+
+{% include 'AppBundle:BookshopCore/homepage:footer.html.twig' %}

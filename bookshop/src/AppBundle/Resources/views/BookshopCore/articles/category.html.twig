@@ -1,0 +1,11 @@
+{% extends 'AppBundle:BookshopCore/homepage:index.html.twig' %}
+
+{% block content %}
+
+    <h1>Product catalogue (FILTERED)</h1>
+
+    {{ render_esi(
+      controller('AppBundle:Default:getArticlesByCategory', {category: category})
+    ) }}
+
+{% endblock %}

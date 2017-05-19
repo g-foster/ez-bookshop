@@ -46,6 +46,7 @@ if (!$useDebugging) {
 if (($useHttpCache = getenv('SYMFONY_HTTP_CACHE')) === false || $useHttpCache === '') {
     $useHttpCache = $environment !== 'dev';
 }
+$useHttpCache = true;
 
 // Load HTTP Cache ...
 if ($useHttpCache) {
