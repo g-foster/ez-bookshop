@@ -34,7 +34,7 @@ class ArticleRepository
             /// ... throw exception ...
         }
 
-        return array('searchHits' => $searchResult->searchHits);
+        return ['searchHits' => $searchResult->searchHits];
     }
 
     public function getArticlesByParentLocation($parentLocationId)
@@ -49,7 +49,8 @@ class ArticleRepository
         if (null === $searchResult) {
             /// ... throw exception ...
         }
+dump($searchResult);
 
-        return array('searchHits' => $searchResult->searchHits);
+        return ['searchHits' => $searchResult->searchHits];
     }
 }
