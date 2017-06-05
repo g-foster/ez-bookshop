@@ -49,7 +49,6 @@ class ArticleRepository
         if (null === $searchResult) {
             /// ... throw exception ...
         }
-dump($searchResult);
 
         return ['searchHits' => $searchResult->searchHits];
     }
