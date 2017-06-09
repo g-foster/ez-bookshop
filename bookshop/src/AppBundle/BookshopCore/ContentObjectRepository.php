@@ -6,7 +6,7 @@ use eZ\Publish\API\Repository\SearchService;
 use eZ\Publish\API\Repository\Values\Content\LocationQuery;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 
-class ArticleRepository
+class ContentObjectRepository
 {
     /**
      * @var searchService
@@ -21,7 +21,7 @@ class ArticleRepository
         $this->searchService = $searchService;
     }
 
-    public function getArticlesByFieldValue($field, $fieldValue)
+    public function getContentByFieldValue($field, $fieldValue)
     {
         $query = new LocationQuery();
         $query->filter = new Criterion\LogicalAnd([
@@ -37,7 +37,7 @@ class ArticleRepository
         return ['searchHits' => $searchResult->searchHits];
     }
 
-    public function getArticlesByParentLocation($parentLocationId)
+    public function getContentByParentLocation($parentLocationId)
     {
         $query = new LocationQuery();
         $query->filter = new Criterion\LogicalAnd([

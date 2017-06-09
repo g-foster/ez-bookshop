@@ -5,7 +5,7 @@
     <h1>Product catalogue (FILTERED)</h1>
 
     {{ render_esi(
-      controller('AppBundle:Default:getArticlesByCategory', {category: category})
+      controller('AppBundle:Default:getContentByCategory', {category: category})
     ) }}
 
 {% endblock %}

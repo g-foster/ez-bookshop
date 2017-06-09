@@ -1,0 +1,14 @@
+{{ date().timestamp }}
+
+{% if searchHits is defined and searchHits is not empty %}
+
+    {% for searchHit in searchHits %}
+
+        {{ ez_render_field(searchHit.valueObject, "image") }}
+        <p>{{ ez_field_value(searchHit.valueObject, "title") }}</p>
+        <p>{{ ez_field_value(searchHit.valueObject, "description") }}</p>
+        <p>£{{ ez_field_value(searchHit.valueObject, "price") }}</p>
+
+    {% endfor %}
+
+{% endif %}

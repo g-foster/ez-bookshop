@@ -1,6 +1,3 @@
-imports:
-    - { resource: views.yml }
-
 ezpublish:
     # Repositories configuration, setup default repository to support solr if enabled
     repositories:

@@ -23,7 +23,7 @@ class DefaultController extends Controller {
   {
     // Render the articles which belong to the particular category that has been passed in
     $response = $this->render(
-      'AppBundle:BookshopCore/articles:category.html.twig', array('category' => $category)
+      'AppBundle:BookshopCore/content:category.html.twig', array('category' => $category)
     );
 
     // $response->setSharedMaxAge(60); <<< NO NEED FOR THIS since now cached in getArticlesAction()
@@ -31,17 +31,17 @@ class DefaultController extends Controller {
     return $response;
   }
 
-  public function getArticlesByCategoryAction($category)
+  public function getContentByCategoryAction($category)
   {
     // Get an instance of your bookshop service
-    $articleRepository = $this->container->get('bookshop.articlerepository');
+    $repository = $this->container->get('bookshop.content.object.repository');
 
     // Get an array of 'searchHits' from that repository search based on category
-    $articles = $articleRepository->getArticlesByFieldValue('category', $category);
+    $content = $repository->getContentByFieldValue('category', $category);
 
     // Renders and returns the articles via your custom template
     $response = $this->render(
-      'AppBundle:BookshopCore/articles:article-list.html.twig', $articles
+      'AppBundle:BookshopCore/content:content-object-list.html.twig', $content
     );
 
     $response->setSharedMaxAge(60);
@@ -49,17 +49,17 @@ class DefaultController extends Controller {
     return $response;
   }
 
-  public function getArticlesAction($parentLocationId)
+  public function getContentAction($parentLocationId)
   {
     // Get an instance of your bookshop service
-    $articleRepository = $this->container->get('bookshop.articlerepository');
+    $articleRepository = $this->container->get('bookshop.content.object.repository');
 
     // Get an array of 'searchHits' from that repository search
-    $articles = $articleRepository->getArticlesByParentLocation($parentLocationId);
+    $articles = $articleRepository->getContentByParentLocation($parentLocationId);
 
     // Render the articles via your custom template
     $response = $this->render(
-      'AppBundle:BookshopCore/articles:article-list.html.twig', $articles
+      'AppBundle:BookshopCore/content:content-object-list.html.twig', $articles
     );
 
     $response->setSharedMaxAge(60);
