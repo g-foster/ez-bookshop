@@ -1,5 +1,5 @@
 services:
-  bookshop.content.object.repository:
-    class: AppBundle\BookshopCore\ContentObjectRepository
-    arguments:
-      - '@ezpublish.api.service.search'
+  # bookshop.content.object.repository:
+  #   class: AppBundle\BookshopCore\ContentObjectRepository
+  #   arguments:
+  #     - '@ezpublish.api.service.search'

@@ -51,7 +51,7 @@ stash:
     tracking_values: false
 
 framework:
-    esi:             { enabled: true } # <<< ADDITION
+    esi:             ~
     translator:      { fallback: "%locale_fallback%" }
     secret:          "%secret%"
     router:
@@ -78,7 +78,7 @@ framework:
         #       default session name will be set to "eZSESSID{siteaccess_hash}" (unique session name per siteaccess)
         #       Further reading on sessions: https://doc.ez.no/display/EZP/Session
 
-    fragments:       { path: /_fragment } # <<< ADDITION
+    fragments:  ~
 
     http_method_override: true
 
