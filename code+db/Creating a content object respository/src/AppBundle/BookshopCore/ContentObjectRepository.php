@@ -29,6 +29,7 @@ class ContentObjectRepository
             new Criterion\Field($field, Criterion\Operator::EQ, $fieldValue)
         ]);
 
+        $searchResult = $this->searchService->findContent($query);
         return ['searchHits' => $searchResult->searchHits];
     }
 
@@ -40,6 +41,7 @@ class ContentObjectRepository
             new Criterion\ParentLocationId($parentLocationId)
         ]);
 
+        $searchResult = $this->searchService->findContent($query);
         return ['searchHits' => $searchResult->searchHits];
     }
 }
